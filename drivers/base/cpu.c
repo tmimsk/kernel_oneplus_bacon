@@ -118,6 +118,9 @@ static ssize_t show_online_control(struct device *dev,
 		case ONL_CONT_MODE_OFFLINE:
 			return sprintf(buf, "2: forced offline\n");
 			break;
+		case ONL_CONT_MODE_LOCK4_3:
+			return sprintf(buf, "3: Core 4 locked to Core 3\n");
+			break;
 	}
 	
 	return sprintf(buf, "Core online control invalid status\n");
